@@ -65,7 +65,7 @@ class StudentAdapter(val students: MutableList<StudentModel>): RecyclerView.Adap
 
       AlertDialog.Builder(holder.itemView.context)
         .setTitle("Delete student")
-        .setMessage("Are you sure to delete this student?")
+        .setMessage("Are you sure to delete student " + deleteStudent.studentName+ "?")
         .setPositiveButton("Ok"){_,_->
           students.removeAt(deletePosition)
           notifyItemRemoved(deletePosition)
